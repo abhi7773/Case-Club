@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+:root {
+    --green: rgb(255, 149, 0);
+    --black: black;
+    --light-color: #666;
+    --box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.1);
+    --border: 2rem solid rgba(0, 0, 0, 0.1);
+    --outline: .1rem solid rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    /* font-size: 62.5px; */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background: white;
+}
+
+.logo {
+    height: 40px;
+    width: 160px;
+}
+
+.header {
+    border: 0px solid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .navbar a {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.header .navbar a:hover {
+    color: var(--green);
+}
+
+.header .icons div {
+    border: 0px solid;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 1.5rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header .icons div:hover {
+    background: var(--green);
+    color: white;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .navbar.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form {
+    border: 1px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 3.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--green);
+}
+
+.btn {
+    border: .2rem solid var(--black);
+    margin-top: 1rem;
+    display: flex;
+    padding: .2rem 1rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background: var(--green);
+    color: #fff;
+}
+
+.header .login-form {
+    border: 1px solid;
+    position: absolute;
+    width: 30rem;
+    top: 110%;
+    right: -110%;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    align-items: center;
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header .login-form .box {
+    width: 100%;
+    border: 0px solid;
+    margin: .4rem 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.header .login-form p {
+    font-size: .8rem;
+    padding: .1rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a {
+    font-size: .8rem;
+    padding: .1rem 0;
+}
+
+.photo {
+    position: center;
+    width: 100%;
+    height: 700px;
+    box-shadow: 6px 6px 5px rgba(1, 1, 1, 0.1);
+}
+
+/* -------------------features--------------------- */
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 1.2rem;
+    font-size: 1.9rem;
+    color: var(--black);
+}
+
+.heading span {
+    background: var(--green);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 2rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.box {
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.f1 {
+    height: 200px;
+    width: 300px;
+    box-shadow: 6px 6px 5px rgba(1, 1, 1, 0.1);
+    margin-left: 3rem;
+}
+
+.carousel-item {
+    margin-top: -60px;
+}
+
+.twobigbox {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    margin-left: 2rem;
+}
+
+.twobigbox .b1 {
+    margin-left: 4.4rem;
+    width: 600px;
+    height: 480px;
+}
+
+/* -----------------category------------------------ */
+
+.category h2 {
+    margin: 6rem 0 2rem 39rem;
+    color: #666;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.all-cat{
+    background: rgb(243, 243, 243);
+    margin: 0 2rem 0 2rem;
+}
+
+.cat-box {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 4rem 0 4rem;
+}
+
+.cat-name{
+    margin: 1rem 0 0 3.7rem;
+    font-size: 23px;
+    color: rgb(94, 94, 94);
+}
+
+.cat {
+    height: 200px;
+    width: 240px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.cat:hover{
+    transform: translate(-5px,-10px);
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .logo {
+        height: 30px;
+        width: 120px;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-btn {
+        /* display: block; */
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 15rem;
+        box-shadow: var(--box-shadow);
+        border-radius: 2rem;
+        background: #fff;
+    }
+
+    .header .navbar a {
+        font-size: 1rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+    .header .search-form {
+        width: 30rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
