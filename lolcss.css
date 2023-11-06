@@ -219,29 +219,41 @@ body {
     clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
 }
 
+.box-container {
+    align-items: center;
+    justify-content: center;
+}
+
 .box {
     width: 100%;
     padding: 1rem;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .f1 {
     height: 200px;
     width: 300px;
     box-shadow: 6px 6px 5px rgba(1, 1, 1, 0.1);
-    margin-left: 3rem;
+    margin: 0 2rem 0 0;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.carousel-item {
+/* .carousel-item {
     margin-top: -60px;
-}
+} */
 
 .twobigbox {
-    display: flex;
     padding: 1rem;
     margin: 1rem;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .twobigbox .b1 {
@@ -253,12 +265,22 @@ body {
 /* -----------------category------------------------ */
 
 .category h2 {
-    margin: 6rem 0 2rem 39rem;
+    margin: 6rem 0 2rem 0;
     color: #666;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.all-cat{
+.cate-line{
+    height: 3px;
+    width: 80px;
+    background: orange;
+    
+}
+
+.all-cat {
     background: rgb(243, 243, 243);
     margin: 0 2rem 0 2rem;
 }
@@ -266,25 +288,156 @@ body {
 .cat-box {
     padding: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 3rem 4rem 0 4rem;
+    flex-wrap: wrap;
 }
 
-.cat-name{
+.cat-name {
     margin: 1rem 0 0 3.7rem;
     font-size: 23px;
     color: rgb(94, 94, 94);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cat {
-    height: 200px;
+    height: 220px;
     width: 240px;
     background-color: white;
     border-radius: 50%;
 }
 
-.cat:hover{
-    transform: translate(-5px,-10px);
+.cat:hover {
+    transform: translate(-5px, -10px);
+}
+
+/* ------------------------offer-------------------------- */
+
+.offer{
+    /* background: radial-gradient(#fff,#a6beff); */
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    margin-top: 80px;
+    padding: 10px 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 .offer-img{
+    padding: 10px;
+    height: 450px;
+    width: 440px;
+}
+
+.col-2 .offer-img:hover {
+    transform: translate(-5px, -13px);
+    cursor: pointer;
+}
+
+.col-3{
+    margin-top: 80px;
+}
+
+small{
+    color: #555;
+}
+
+/* -----------------products---------------------- */
+.containerr{
+    margin-top: 70px;
+}
+.row-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 3.1rem 0 3.1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#product-title{
+    margin: 0 0 2rem 0;
+    color: #666;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0 1rem 0;
+}
+
+.product-img{
+    height: 420px;
+    width: 355px;
+}
+
+.product-img:hover{
+    border: 1px solid black;
+    /* transform: scale(1.1);s */
+    transform: translate(-5px, -13px);
+    cursor: pointer;
+}
+
+
+.product{
+    align-items: center;
+}
+
+
+.price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+/* ---------------------smart watch--------------------------- */
+
+.watch-img{
+    height: 400px;
+}
+
+.watch-img:hover{
+    border: 1px solid black;
+    /* transform: scale(1.1);s */
+    transform: translate(-5px, -13px);
+    cursor: pointer;
+}
+
+#buttonn{
+    border: .1rem solid gray;
+    margin: 1rem 0 3rem 0;
+    display: flex;
+    padding: .2rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 40px;
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+    width: 200px;
+    text-decoration: none;
+    justify-content: center;
+}
+
+#buttonn:hover {
+    background: var(--green);
+    color: #fff;
+}
+
+.button-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width:991px) {
