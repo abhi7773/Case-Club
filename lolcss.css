@@ -363,7 +363,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin: 0rem 7rem 0 7rem;
+        margin: 0rem 1rem 0 1rem;
     }
 
     .all-cat {
@@ -372,8 +372,8 @@ body {
     }
 
     .cat {
-        height: 60px;
-        width: 70px;
+        height: 100px;
+        width: 110px;
     }
 
     .cats{
