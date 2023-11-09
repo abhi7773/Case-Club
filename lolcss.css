@@ -39,7 +39,7 @@ body {
 
 .header {
     border: 0px solid;
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
@@ -49,6 +49,7 @@ body {
     padding: 1rem 9%;
     background: #fff;
     box-shadow: var(--box-shadow);
+    z-index: 9999;
 }
 
 .header .navbar a {
@@ -195,57 +196,91 @@ body {
     padding: .1rem 0;
 }
 
+/* -------------------------home main photo after nav------------------------------ */
+/* 
 .photo {
     position: center;
     width: 100%;
     height: 700px;
     box-shadow: 6px 6px 5px rgba(1, 1, 1, 0.1);
+} */
+
+/* -------------------------brands------------------------ */
+.wrapper {
+    height: 200px;
+    /* border: 1px solid #ddd; */
+    display: flex;
+    margin-top: 2rem;
+    overflow-x: auto;
 }
 
-/* -------------------features--------------------- */
-.heading {
-    text-align: center;
-    padding: 2rem 0;
-    padding-bottom: 1.2rem;
-    font-size: 1.9rem;
-    color: var(--black);
-}
-
-.heading span {
-    background: var(--green);
-    color: #fff;
-    display: inline-block;
-    padding: .5rem 2rem;
-    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
-}
-
-.box-container {
-    align-items: center;
-    justify-content: center;
-}
-
-.box {
-    width: 100%;
-    padding: 1rem;
-    justify-content: space-around;
-    margin: 1rem;
+.brand-container h1 {
+    color: #666;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     flex-wrap: wrap;
-}
-
-.f1 {
-    height: 200px;
-    width: 300px;
-    box-shadow: 6px 6px 5px rgba(1, 1, 1, 0.1);
-    margin: 0 2rem 0 0;
-    align-items: center;
     justify-content: center;
+    margin-top: 1rem;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
+.wrapper .item {
+    min-width: 160px;
+    height: 140px;
+    line-height: 27px;
+    text-align: center;
+    background-color: white;
+    margin-left: 4px;
+}
+
+.brand-logo {
+    height: 150px;
+    width: 150px;
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+
+#line {
+    width: 100%;
+    height: 1.2px;
+    background: rgb(231, 231, 231);
+    margin-top: 20px;
+}
+
+@media only screen and (max-width:600px) {
+    .wrapper {
+        height: 140px;
+    }
+
+    .wrapper .item {
+        min-width: 70px;
+        height: 70px;
+        line-height: 18px;
+        text-align: center;
+        background-color: white;
+        margin-left: 3.2rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brand-logo {
+        height: 90px;
+        width: 90px;
+        border: 1px solid rgb(195, 195, 195);
+        border-radius: 50%;
+        margin-top: 6px;
+    }
 
 }
 
-/* .carousel-item {
-    margin-top: -60px;
-} */
+/* -------------------two big box--------------------- */
 
 .twobigbox {
     padding: 1rem;
@@ -262,6 +297,16 @@ body {
     height: 480px;
 }
 
+@media only screen and (max-width:600px) {
+    
+    .twobigbox .b1 {
+        margin-left: 0rem;
+        width: 100%;
+        height: 250px;
+        padding: 1rem 0 0 0;
+    }
+}
+
 /* -----------------category------------------------ */
 
 .category h2 {
@@ -273,11 +318,11 @@ body {
     justify-content: center;
 }
 
-.cate-line{
+.cate-line {
     height: 3px;
     width: 80px;
     background: orange;
-    
+
 }
 
 .all-cat {
@@ -312,22 +357,55 @@ body {
     transform: translate(-5px, -10px);
 }
 
+@media only screen and (max-width:600px) {
+    .cat-box {
+        padding: 2rem 2rem 0 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0rem 7rem 0 7rem;
+    }
+
+    .all-cat {
+        margin: 0 0rem 0 0rem;
+        padding: 0 0 2rem 0;
+    }
+
+    .cat {
+        height: 60px;
+        width: 70px;
+    }
+
+    .cats{
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .cat-name {
+        margin: 1rem 0 0 0rem;
+        font-size: 10px;
+        color: rgb(94, 94, 94);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
 /* ------------------------offer-------------------------- */
 
-.offer{
+.offer {
     /* background: radial-gradient(#fff,#a6beff); */
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     margin-top: 80px;
     padding: 10px 0;
 }
 
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.col-2 .offer-img{
+.col-2 .offer-img {
     padding: 10px;
     height: 450px;
     width: 440px;
@@ -338,19 +416,20 @@ body {
     cursor: pointer;
 }
 
-.col-3{
+.col-3 {
     margin-top: 80px;
 }
 
-small{
+small {
     color: #555;
 }
 
 /* -----------------products---------------------- */
-.containerr{
+.containerr {
     margin-top: 70px;
 }
-.row-container{
+
+.row-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -359,7 +438,7 @@ small{
     align-items: center;
 }
 
-#product-title{
+#product-title {
     margin: 0 0 2rem 0;
     color: #666;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -369,31 +448,31 @@ small{
     align-items: center;
 }
 
-.first-row{
+.first-row {
     display: flex;
     flex-wrap: wrap;
     margin: 1rem 0 1rem 0;
 }
 
-.product-img{
+.product-img {
     height: 420px;
     width: 355px;
 }
 
-.product-img:hover{
-    border: 1px solid black;
+.product-img:hover {
+    /* border: 1px solid black; */
     /* transform: scale(1.1);s */
     transform: translate(-5px, -13px);
     cursor: pointer;
 }
 
 
-.product{
+.product {
     align-items: center;
 }
 
 
-.price{
+.price {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -402,18 +481,8 @@ small{
 
 /* ---------------------smart watch--------------------------- */
 
-.watch-img{
-    height: 400px;
-}
 
-.watch-img:hover{
-    border: 1px solid black;
-    /* transform: scale(1.1);s */
-    transform: translate(-5px, -13px);
-    cursor: pointer;
-}
-
-#buttonn{
+#buttonn {
     border: .1rem solid gray;
     margin: 1rem 0 3rem 0;
     display: flex;
@@ -433,12 +502,245 @@ small{
     color: #fff;
 }
 
-.button-div{
+.button-div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
+/* ---------------------------our features--------------------------------- */
+
+.features {
+    /* height: 100vh; */
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.this-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.this-column {
+    width: 100%;
+    border: 1px solid rgb(193, 193, 193);
+    padding: 0 1em 1em 1em;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid rgb(193, 193, 193);
+    height: 100%;
+    width: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffff 50%, #2c7bfe 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.h03 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+}
+
+.p01 {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+
+.icon-wrapper {
+    background-color: #2c7bfe;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+
+}
+
+.card:hover {
+    background-position: 0 100%;
+}
+
+.card:hover .icon-wrapper {
+    background-color: #ffffff;
+    color: #2c7bfe;
+}
+
+.card:hover .h03 {
+    color: #ffffff;
+}
+
+.card:hover .p01 {
+    color: #f0f0f0;
+}
+
+@media screen and (min-width:768px) {
+    .features {
+        padding: 1em 3em;
+    }
+
+    .this-column {
+        flex: 0 50%;
+        max-width: 50%;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+    .features {
+        padding: 1em 3em;
+    }
+
+    .this-column {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+/* ---------------------------------help center------------------------ */
+
+.help-center {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem 0 3rem 0;
+    background: radial-gradient(343px at 46.3% 47.5%, rgb(242, 242, 242) 0%, rgb(241, 241, 241) 72.9%);
+}
+
+.icone {
+    height: 300px;
+    width: 400px;
+    padding: 6.5rem 3rem 2rem 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0rem 0rem 2rem 0rem;
+}
+
+.help {
+    font-size: 250px;
+}
+
+/* --------------------------------------------footer---------------------------------------- */
+
+.containerrr {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.rowwww {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col .footer-ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col .footer-ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col .footer-ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-link a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-link a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+@media (max-width:767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/* --------------------------------------------responsive---------------------------------- */
 
 @media (max-width:991px) {
     html {
