@@ -298,7 +298,7 @@ body {
 }
 
 @media only screen and (max-width:600px) {
-    
+
     .twobigbox .b1 {
         margin-left: 0rem;
         width: 100%;
@@ -376,7 +376,7 @@ body {
         width: 110px;
     }
 
-    .cats{
+    .cats {
         padding: 1rem 1rem 1rem 1rem;
     }
 
@@ -422,6 +422,50 @@ body {
 
 small {
     color: #555;
+}
+
+@media only screen and (max-width:600px) {
+
+    .col-2 {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-2 .offer-img {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-3 {
+        margin-top: 40px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem 1rem 2rem;
+    }
+
+    .offer {
+        /* background: radial-gradient(#fff,#a6beff); */
+        background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+        margin-top: 40px;
+        padding: 4px 0 4rem 0;
+    }
 }
 
 /* -----------------products---------------------- */
@@ -479,7 +523,44 @@ small {
     margin-top: 10px;
 }
 
-/* ---------------------smart watch--------------------------- */
+@media only screen and (max-width:600px) {
+    .product-img {
+        height: 165px;
+        width: 145px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product {
+        padding: 1rem 0rem 1rem 0rem;
+        align-items: center;
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .first-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        /* margin: 1rem 0 1rem 0; */
+        /* padding: 0 1rem 0 1rem; */
+    }
+
+    .row-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: row; */
+        padding: 0 0rem 0 0rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* ---------------------button--------------------------- */
 
 
 #buttonn {
@@ -641,6 +722,29 @@ small {
 
 .help {
     font-size: 250px;
+}
+
+@media only screen and (max-width:600px) {
+    .help {
+        font-size: 150px;
+    }
+
+    .help-block {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0rem 4rem 2rem 4rem;
+    }
+
+    .icone {
+        height: 300px;
+        width: 100%;
+        padding: 6.5rem 3rem 2rem 6rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* --------------------------------------------footer---------------------------------------- */
