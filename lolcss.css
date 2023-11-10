@@ -479,6 +479,13 @@ small {
 }
 
 @media only screen and (max-width:600px) {
+    .price,h5,p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 10px;
+        font-size: 13px;
+    }
     .product-img {
         height: 171px;
         width: 145px;
