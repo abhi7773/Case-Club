@@ -1,2 +1,0 @@
-# Case-Club
-shop website
